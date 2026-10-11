@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111026">
+  <title>Innerverse — Your feelings, in orbit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stars stars-one"></div><div class="stars stars-two"></div>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#home"><span class="brand-icon">✳</span><span>innerverse<span class="brand-period">.</span><small>YOUR INNER UNIVERSE</small></span></a>
+      <div class="nav-caption">EXPLORE</div>
+      <nav>
+        <a class="nav-link active" href="#home"><span>◉</span> My universe</a>
+        <a class="nav-link" href="#checkin"><span>☾</span> Mood check-in</a>
+        <a class="nav-link" href="#journal"><span>✎</span> Thought capsule</a>
+        <a class="nav-link" href="#weekly"><span>✧</span> My constellations</a>
+      </nav>
+      <div class="side-quote"><span class="quote-star">✦</span><p>“Even the moon has phases. You are allowed to, too.”</p><small>A NOTE TO REMEMBER</small></div>
+      <div class="sidebar-bottom"><span class="online-dot"></span> A little space just for you</div>
+    </aside>
+
+    <main>
+      <header class="topbar" id="home">
+        <div><p class="overline" id="today-label">YOUR COSMIC CHECK-IN</p><h1>Welcome to your universe<span class="title-star"> ✦</span></h1><p class="top-subtitle">There is no right way to feel. Start wherever you are.</p></div>
+        <div class="profile-chip"><span class="profile-orb">✧</span><span>explorer</span></div>
+      </header>
+
+      <section class="cosmos-card">
+        <div class="cosmos-copy">
+          <span class="pill"><span class="tiny-dot"></span> YOUR INNER SPACE</span>
+          <h2>Your feelings are<br><em>part of your galaxy.</em></h2>
+          <p>Check in with yourself and watch your little universe take shape, one honest moment at a time.</p>
+          <a class="glow-button" href="#checkin">Meet today's mood <span>↗</span></a>
+        </div>
+        <div class="universe-art" aria-label="Decorative illustrated galaxy">
+          <div class="nebula nebula-a"></div><div class="nebula nebula-b"></div>
+          <div class="planet planet-main"><span></span></div><div class="planet planet-small"></div><div class="planet planet-ring"></div>
+          <div class="moon"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <i class="sparkle s1">✦</i><i class="sparkle s2">✧</i><i class="sparkle s3">✦</i><i class="sparkle s4">·</i>
+          <span class="universe-label">you, in progress</span>
+        </div>
+      </section>
+
+      <section class="section" id="checkin">
+        <div class="section-title"><div><p class="overline">01 — TUNE IN</p><h2>What’s your atmosphere today?</h2></div><span class="section-note">No judgement. Just noticing.</span></div>
+        <div class="mood-grid" role="group" aria-label="Choose your mood">
+          <button class="mood-card" data-mood="Radiant" data-emoji="☀" data-color="radiant"><span class="mood-emoji">☀</span><strong>Radiant</strong><small>bright & hopeful</small></button>
+          <button class="mood-card" data-mood="Floating" data-emoji="☁" data-color="floating"><span class="mood-emoji">☁</span><strong>Floating</strong><small>calm & okay</small></button>
+          <button class="mood-card" data-mood="Cloudy" data-emoji="☾" data-color="cloudy"><span class="mood-emoji">☾</span><strong>Cloudy</strong><small>a little unsure</small></button>
+          <button class="mood-card" data-mood="Stormy" data-emoji="ϟ" data-color="stormy"><span class="mood-emoji">ϟ</span><strong>Stormy</strong><small>stressed or low</small></button>
+          <button class="mood-card" data-mood="Restless" data-emoji="✳" data-color="restless"><span class="mood-emoji">✳</span><strong>Restless</strong><small>full of energy</small></button>
+        </div>
+        <div class="selected-mood" id="selected-mood" aria-live="polite">Choose the little sky that feels closest to yours.</div>
+        <button class="button-primary" id="save-mood">Add this feeling to my galaxy <span>↗</span></button>
+      </section>
+
+      <section class="section journal-section" id="journal">
+        <div class="section-title"><div><p class="overline">02 — LET IT OUT</p><h2>A thought capsule</h2></div><span class="section-note">Private to this browser</span></div>
+        <div class="journal-card">
+          <div class="journal-icon">✎</div>
+          <div class="journal-body"><h3>What’s taking up space in your mind?</h3><p>You can write a tiny win, a worry, a question, or nothing at all.</p>
+            <textarea id="journal-entry" rows="4" maxlength="1200" placeholder="Dear universe, today I’m thinking about…"></textarea>
+            <div class="journal-actions"><span id="word-count">0 / 1200 characters</span><button class="button-secondary" id="save-journal">Seal my capsule <span>✦</span></button></div>
+            <p class="save-message" id="journal-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="weekly">
+        <div class="section-title"><div><p class="overline">03 — LOOK BACK SOFTLY</p><h2>Your constellation this week</h2></div><span class="week-badge">LAST 7 DAYS</span></div>
+        <div class="insights-grid">
+          <article class="insight-card"><div class="insight-head"><span>MOOD STARS</span><span class="insight-icon lavender">✧</span></div><div class="mood-history" id="mood-history"></div><p class="insight-summary" id="mood-summary">Your constellation is waiting for its first star.</p></article>
+          <article class="insight-card reflection-card"><div class="insight-head"><span>YOUR WEEKLY REFLECTION</span><span class="insight-icon peach">☾</span></div><div class="reflection-quote">“</div><p id="weekly-reflection">You don't need to have every answer. Begin by noticing how you feel, one day at a time.</p><button id="reflection-prompt" class="link-button">Give me a reflection prompt ↗</button></article>
+        </div>
+      </section>
+
+      <section class="affirmation-banner">
+        <div class="affirmation-symbol">✧</div><div class="affirmation-text"><p class="overline">A MESSAGE FROM YOUR UNIVERSE</p><h2 id="affirmation">I can be a work in progress and still be wonderful.</h2><p>Take a breath. You’re here, and that matters.</p></div><button id="next-affirmation" class="round-next" aria-label="Next affirmation">↻</button><div class="banner-orb"></div>
+      </section>
+
+      <footer><a class="footer-brand" href="#home">✳ innerverse.</a><span>Made of stardust, feelings, and small beginnings.</span><a href="#home">Back to the stars ↑</a></footer>
+      <p class="disclaimer">Innerverse is a creative self-reflection tool, not a mental-health diagnostic service or a substitute for professional care. Entries are stored in this browser only. If your feelings are becoming hard to manage, consider reaching out to someone you trust or a qualified professional.</p>
+    </main>
+  </div>
+</body>
+</html>
